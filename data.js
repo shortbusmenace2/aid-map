@@ -1127,18 +1127,18 @@ const NGO_DATA = {
 // RSS sources — using rss2json proxy for CORS
 const RSS_SOURCES = [
   {
-    name: "Kyiv Independent",
-    url: "https://api.rss2json.com/v1/api.json?rss_url=https://kyivindependent.com/feed/",
+      name: "Kyiv Independent",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https://kyivindependent.com/news-archive/rss/&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
     color: "#c8a84b"
   },
   {
-    name: "Reuters Ukraine",
-    url: "https://api.rss2json.com/v1/api.json?rss_url=https://feeds.reuters.com/reuters/worldNews",
-    color: "#8da3bc"
+    name: "RFE/RL Ukraine",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.rferl.org/api/zbgvmtl-vomx-tpeq_kmr&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
+    color: "#a8c4d8"
   },
   {
     name: "Ukrainska Pravda",
-    url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.pravda.com.ua/eng/rss/view_news/",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.pravda.com.ua/eng/rss/view_news/&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
     color: "#f2ead8"
   }
 ];

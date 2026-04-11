@@ -1140,5 +1140,20 @@ const RSS_SOURCES = [
     name: "Ukrainska Pravda",
     url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.pravda.com.ua/eng/rss/view_news/&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
     color: "#f2ead8"
-  }
+  },
+   {
+    name: "BBC News",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https://feeds.bbci.co.uk/news/world/europe/rss.xml&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
+    color: "#e8edf2"
+  },
+  {
+    name: "Ukrinform",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.ukrinform.net/rss/block-lastnews&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
+    color: "#a8c4d8"
+  },
+  {
+    name: "Kyiv Post",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.kyivpost.com/feed&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
+    color: "#e8edf2"
+  },
 ];

@@ -1141,10 +1141,10 @@ const RSS_SOURCES = [
     url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.pravda.com.ua/eng/rss/view_news/&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
     color: "#f2ead8"
   },
-   {
-    name: "BBC News",
-    url: "https://api.rss2json.com/v1/api.json?rss_url=https://feeds.bbci.co.uk/news/world/europe/rss.xml&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
-    color: "#e8edf2"
+ {
+    name: "Euromaidan Press",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https://euromaidanpress.com/feed&api_key=pert0s3ltlagqzep7o2ra37g4wmecjpb7p6be4uh",
+    color: "#a8c4d8"
   },
   {
     name: "Ukrinform",

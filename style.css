@@ -743,3 +743,24 @@ footer {
   .header-right { display: none; }
   .map-legend { display: none; }
 }
+
+.how-to-help-btn {
+  background: rgba(240,244,248,0.08);
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  border-radius: 2px;
+  transition: background 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+}
+.how-to-help-btn:hover {
+  background: rgba(240,244,248,0.15);
+}
+@media (max-width: 600px) {
+  .how-to-help-btn { display: none; }
+}

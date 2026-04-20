@@ -736,12 +736,6 @@ footer {
   :root { --sidebar-width: 100%; }
 }
 
-@media (max-width: 600px) {
-  .header-right { display: flex; }
-  .status-pill { display: none; }
-  .last-updated { display: none; }
-}
-
 .how-to-help-btn {
   background: rgba(240,244,248,0.08);
   border: 1px solid var(--border-strong);
@@ -758,4 +752,15 @@ footer {
 }
 .how-to-help-btn:hover {
   background: rgba(240,244,248,0.15);
+}
+
+@media (max-width: 600px) {
+  .header-right { display: flex; }
+  .status-pill { display: none; }
+  .last-updated { display: none; }
+  .how-to-help-btn {
+    border: none;
+    background: transparent;
+    padding: 4px 0;
+  }
 }

@@ -739,7 +739,7 @@ footer {
 .how-to-help-btn {
   background: rgba(240,244,248,0.08);
   border: 1px solid var(--border-strong);
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.62rem;
   letter-spacing: 0.1em;
@@ -747,7 +747,7 @@ footer {
   border-radius: 2px;
   transition: background 0.15s;
   white-space: nowrap;
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
 }
 .how-to-help-btn:hover {

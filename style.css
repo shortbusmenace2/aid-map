@@ -740,6 +740,7 @@ footer {
   .header-inner { padding: 10px 14px; }
   h1 { font-size: 1.2rem; }
   .map-section { padding: 14px; }
+  .header-right { display: flex; }
   .map-legend { display: none; }
 }
 

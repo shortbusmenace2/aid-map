@@ -667,7 +667,7 @@ const NGO_DATA = {
 
   "lviv": {
     name: "Lviv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Lviv Volunteer Center",
@@ -903,7 +903,7 @@ const NGO_DATA = {
 
   "cherkasy": {
     name: "Cherkasy Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UN Development Programme Ukraine",
@@ -926,7 +926,7 @@ const NGO_DATA = {
 
   "vinnytsia": {
     name: "Vinnytsia Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "International Organization for Migration (IOM)",
@@ -957,7 +957,7 @@ const NGO_DATA = {
 
   "zhytomyr": {
     name: "Zhytomyr Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Danish Refugee Council",
@@ -1090,7 +1090,7 @@ const NGO_DATA = {
   "rivne": { name: "Rivne Oblast", conflict: false, ngos: [] },
   "ternopil": {
     name: "Ternopil Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "MoveUkraine",

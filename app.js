@@ -1,6 +1,18 @@
 let activeLayer = null;
 let geoJsonLayer = null;
 
+const map = L.map('leaflet-map', {
+  zoomControl: true,
+  scrollWheelZoom: true,
+  doubleClickZoom: true,
+  dragging: true,
+  attributionControl: false,
+  minZoom: 5,
+  maxZoom: 9
+});
+
+map.setView([49.0, 31.5], 5);
+
 // ---- THEME TOGGLE ----
 
 function toggleTheme() {
@@ -63,17 +75,6 @@ function toggleSidebar() {
 // UKRAINE AID MAP — app.js (Leaflet edition)
 // ============================================
 
-const map = L.map('leaflet-map', {
-  zoomControl: true,
-  scrollWheelZoom: true,
-  doubleClickZoom: true,
-  dragging: true,
-  attributionControl: false,
-  minZoom: 5,
-  maxZoom: 9
-});
-
-map.setView([49.0, 31.5], 5);
 
 function getThemeStyles() {
   const dark = document.documentElement.getAttribute('data-theme') === 'dark';

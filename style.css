@@ -48,25 +48,6 @@
    Type: Playfair Display + IBM Plex Mono/Sans
    ============================================ */
 
-:root {
-  --navy: #111113;
-  --navy-mid: #18181b;
-  --navy-light: #222226;
-  --amber: #e8edf2;
-  --amber-bright: #ffffff;
-  --amber-dim: #6b7280;
-  --parchment: #f0f4f8;
-  --parchment-mid: #d1d9e0;
-  --conflict-red: #c0392b;
-  --conflict-orange: #e05a2b;
-  --text-primary: #eef2f6;
-  --text-muted: #6b7280;
-  --text-dark: #111113;
-  --border: rgba(240, 244, 248, 0.08);
-  --border-strong: rgba(240, 244, 248, 0.18);
-  --accent: #a8c4d8;
-  --sidebar-width: 320px;
-}
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

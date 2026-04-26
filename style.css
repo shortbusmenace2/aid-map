@@ -777,12 +777,16 @@ footer {
   background: rgba(240,244,248,0.15);
 }
 
-
 @media (max-width: 600px) {
   .header-right { display: flex; }
   .status-pill { display: none; }
   .last-updated { display: none; }
   .how-to-help-btn {
+    border: none;
+    background: transparent;
+    padding: 4px 0;
+  }
+   .theme-toggle-btn {
     border: none;
     background: transparent;
     padding: 4px 0;

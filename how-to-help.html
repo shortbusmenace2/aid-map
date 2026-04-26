@@ -8,250 +8,67 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #111113;
-      --navy-mid: #18181b;
-      --navy-light: #222226;
-      --parchment: #f0f4f8;
-      --text-primary: #eef2f6;
+      --bg: #f5f0e8;
+      --bg-mid: #ede8dc;
+      --text: #1a1a1a;
+      --text-muted: #6b6560;
+      --border: rgba(26,26,26,0.1);
+      --border-strong: rgba(26,26,26,0.22);
+      --accent: #4a7a9b;
+      --header-shadow: rgba(0,0,0,0.1);
+    }
+    [data-theme="dark"] {
+      --bg: #111113;
+      --bg-mid: #18181b;
+      --text: #eef2f6;
       --text-muted: #6b7280;
-      --border: rgba(240, 244, 248, 0.08);
-      --border-strong: rgba(240, 244, 248, 0.18);
+      --border: rgba(240,244,248,0.08);
+      --border-strong: rgba(240,244,248,0.18);
       --accent: #a8c4d8;
+      --header-shadow: rgba(0,0,0,0.4);
     }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--navy);
-      color: var(--text-primary);
-      font-family: 'IBM Plex Sans', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ---- HEADER ---- */
-    header {
-      background: var(--navy);
-      border-bottom: 1px solid var(--border-strong);
-      padding: 16px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 24px rgba(0,0,0,0.4);
-    }
-
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .flag-bar {
-      display: flex;
-      flex-direction: column;
-      width: 5px;
-      height: 38px;
-      border-radius: 3px;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-    .flag-blue { flex: 1; background: #005BBB; }
-    .flag-yellow { flex: 1; background: #FFD500; }
-
-    .site-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      font-weight: 900;
-      color: var(--parchment);
-      text-decoration: none;
-    }
-    .site-title:hover { color: var(--accent); }
-
-    .page-title {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      margin-top: 3px;
-    }
-
-    .back-btn {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      text-decoration: none;
-      border: 1px solid var(--border-strong);
-      padding: 6px 12px;
-      border-radius: 2px;
-      transition: background 0.15s;
-    }
-    .back-btn:hover { background: rgba(240,244,248,0.06); }
-
-    /* ---- MAIN CONTENT ---- */
-    main {
-      flex: 1;
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 48px 24px 80px;
-      width: 100%;
-    }
-
-    .page-hero {
-      margin-bottom: 48px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .page-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--parchment);
-      line-height: 1.1;
-      margin-bottom: 14px;
-    }
-
-    .page-hero p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      max-width: 560px;
-    }
-
-    /* ---- SECTIONS ---- */
-    .help-section {
-      margin-bottom: 48px;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .section-icon {
-      font-size: 1.2rem;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--parchment);
-    }
-
-    .section-intro {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 20px;
-      padding-left: 2px;
-    }
-
-    /* ---- CARDS ---- */
-    .card {
-      background: var(--navy-mid);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--border-strong);
-      border-radius: 3px;
-      padding: 16px 18px;
-      margin-bottom: 10px;
-      transition: border-left-color 0.15s;
-    }
-
-    .card:hover { border-left-color: var(--parchment); }
-
-    .card-title {
-      font-family: 'IBM Plex Sans', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--parchment);
-      margin-bottom: 6px;
-    }
-
-    .card-body {
-      font-size: 0.80rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    .card-body a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .card-body a:hover { text-decoration: underline; }
-    .card-body strong { color: var(--parchment); font-weight: 600; }
-
-    /* ---- CALLOUT ---- */
-    .callout {
-      background: rgba(168, 196, 216, 0.06);
-      border: 1px solid rgba(168, 196, 216, 0.2);
-      border-radius: 4px;
-      padding: 18px 20px;
-      margin-bottom: 48px;
-    }
-
-    .callout-title {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .callout-body {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    .callout-body a {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .callout-body a:hover { text-decoration: underline; }
-
-    /* ---- DIVIDER ---- */
-    .section-divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 0 0 48px;
-    }
-
-    /* ---- FOOTER ---- */
-    footer {
-      background: var(--navy-mid);
-      border-top: 1px solid var(--border);
-      padding: 16px 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.62rem;
-      color: var(--text-muted);
-    }
-
-    footer a { color: var(--parchment); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    /* ---- RESPONSIVE ---- */
-    @media (max-width: 600px) {
-      header { padding: 12px 16px; }
-      main { padding: 32px 16px 60px; }
-      .page-hero h1 { font-size: 1.8rem; }
-      footer { padding: 14px 16px; }
-    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;min-height:100vh;display:flex;flex-direction:column;transition:background 0.2s,color 0.2s}
+    header{background:var(--bg);border-bottom:1px solid var(--border-strong);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;box-shadow:0 2px 24px var(--header-shadow)}
+    .header-left{display:flex;align-items:center;gap:14px}
+    .header-right{display:flex;align-items:center;gap:10px}
+    .flag-bar{display:flex;flex-direction:column;width:5px;height:38px;border-radius:3px;overflow:hidden;flex-shrink:0}
+    .flag-blue{flex:1;background:#005BBB}
+    .flag-yellow{flex:1;background:#FFD500}
+    .site-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:var(--text);text-decoration:none}
+    .site-title:hover{color:var(--accent)}
+    .page-title{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;color:var(--text-muted);text-transform:uppercase;margin-top:3px}
+    .back-btn{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;letter-spacing:0.08em;color:var(--accent);text-decoration:none;border:1px solid var(--border-strong);padding:6px 12px;border-radius:2px;transition:background 0.15s}
+    .back-btn:hover{background:rgba(0,0,0,0.04)}
+    .theme-toggle-btn{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;letter-spacing:0.08em;color:var(--text);background:transparent;border:1px solid var(--border-strong);padding:6px 12px;border-radius:2px;cursor:pointer;transition:background 0.15s;white-space:nowrap}
+    .theme-toggle-btn:hover{background:rgba(0,0,0,0.04)}
+    [data-theme="dark"] .theme-toggle-btn:hover{background:rgba(240,244,248,0.06)}
+    main{flex:1;max-width:780px;margin:0 auto;padding:48px 24px 80px;width:100%}
+    .page-hero{margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--border)}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--text);line-height:1.1;margin-bottom:14px}
+    .page-hero p{font-size:0.95rem;color:var(--text-muted);line-height:1.7;max-width:560px}
+    .help-section{margin-bottom:48px}
+    .section-header{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+    .section-icon{font-size:1.2rem}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--text)}
+    .section-intro{font-size:0.85rem;color:var(--text-muted);line-height:1.7;margin-bottom:20px}
+    .card{background:var(--bg-mid);border:1px solid var(--border);border-left:3px solid var(--border-strong);border-radius:3px;padding:16px 18px;margin-bottom:10px;transition:border-left-color 0.15s}
+    .card:hover{border-left-color:var(--text)}
+    .card-title{font-family:'IBM Plex Sans',sans-serif;font-size:0.88rem;font-weight:600;color:var(--text);margin-bottom:6px}
+    .card-body{font-size:0.80rem;color:var(--text-muted);line-height:1.7}
+    .card-body a{color:var(--accent);text-decoration:none}
+    .card-body a:hover{text-decoration:underline}
+    .card-body strong{color:var(--text);font-weight:600}
+    .callout{background:var(--bg-mid);border:1px solid var(--border-strong);border-radius:4px;padding:18px 20px;margin-bottom:48px}
+    .callout-title{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+    .callout-body{font-size:0.82rem;color:var(--text-muted);line-height:1.7}
+    .callout-body a{color:var(--accent);font-weight:600;text-decoration:none}
+    .callout-body a:hover{text-decoration:underline}
+    .section-divider{border:none;border-top:1px solid var(--border);margin:0 0 48px}
+    footer{background:var(--bg-mid);border-top:1px solid var(--border);padding:16px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text-muted)}
+    footer a{color:var(--text);text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    @media(max-width:600px){header{padding:12px 16px}main{padding:32px 16px 60px}.page-hero h1{font-size:1.8rem}footer{padding:14px 16px}}
   </style>
 </head>
 <body>
@@ -267,7 +84,10 @@
         <div class="page-title">How to Help</div>
       </div>
     </div>
-    <a href="index.html" class="back-btn">← Back to Map</a>
+    <div class="header-right">
+      <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">☾ Dark</button>
+      <a href="index.html" class="back-btn">← Back to Map</a>
+    </div>
   </header>
 
   <main>
@@ -289,32 +109,26 @@
         <div class="section-title">Financial Giving</div>
       </div>
       <p class="section-intro">Direct financial support is the most impactful way to help. Here's how to give effectively from abroad.</p>
-
       <div class="card">
         <div class="card-title">Choose verified organizations</div>
         <div class="card-body">Use NGOs listed on this map — all have been manually verified. For additional vetting, check <a href="https://www.charitynavigator.org/" target="_blank" rel="noopener">Charity Navigator</a> or the <a href="https://www.give.org/" target="_blank" rel="noopener">BBB Wise Giving Alliance</a> for US-registered organizations. Look for orgs with published financial reports and transparent fund allocation.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Sending money internationally</div>
         <div class="card-body">Most major NGOs accept credit/debit cards, PayPal, and bank transfers directly on their websites. For Ukrainian grassroots organizations, <strong>Wise</strong> and <strong>PayPal</strong> are the most reliable transfer methods with low fees. Avoid unofficial GoFundMe campaigns unless you can personally verify the organizer.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Tax deductibility</div>
         <div class="card-body"><strong>US donors:</strong> Look for 501(c)(3) registered organizations — donations are tax deductible. <strong>UK donors:</strong> Look for registered charities with a Charity Commission number. <strong>EU donors:</strong> Rules vary by country. Most large international NGOs (MSF, UNICEF, IRC, CARE) qualify in major donor countries. Always request a donation receipt.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Monthly giving vs. one-time donations</div>
         <div class="card-body">Monthly donations are significantly more valuable to organizations — they allow long-term planning, staffing, and supply procurement. Even a small monthly commitment (€10–20) provides more operational stability than a larger one-time gift. Most organizations offer easy monthly giving options on their donation pages.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Prioritize conflict-zone organizations</div>
         <div class="card-body">Organizations operating in Donetsk, Kharkiv, Zaporizhzhia, Kherson, Mykolaiv, Sumy, and Odesa oblasts face the greatest funding gaps and operational risks. Use the map to filter by conflict zones and find them. Smaller Ukrainian grassroots orgs in these regions are chronically underfunded compared to large international NGOs.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Employer matching</div>
         <div class="card-body">Many employers match charitable donations, doubling or tripling your impact at no extra cost. Check with your HR department or benefits portal. Organizations like <a href="https://www.benevity.com/" target="_blank" rel="noopener">Benevity</a> manage workplace giving programs for thousands of companies globally.</div>
@@ -330,27 +144,22 @@
         <div class="section-title">Volunteering</div>
       </div>
       <p class="section-intro">There are meaningful ways to contribute your time, both remotely and in person.</p>
-
       <div class="card">
         <div class="card-title">Remote volunteering</div>
         <div class="card-body">Many organizations need translators, researchers, social media managers, web developers, grant writers, and administrative support. <a href="https://www.catchafire.org/" target="_blank" rel="noopener">Catchafire</a> and <a href="https://www.idealist.org/" target="_blank" rel="noopener">Idealist</a> list remote volunteer roles with Ukraine-focused NGOs. <a href="https://razomforukraine.org/volunteer/" target="_blank" rel="noopener">Razom for Ukraine</a> and <a href="https://unitedhelpukraine.org/volunteer" target="_blank" rel="noopener">United Help Ukraine</a> both run active remote volunteer programs.</div>
       </div>
-
       <div class="card">
         <div class="card-title">In-person volunteering in Ukraine</div>
         <div class="card-body">Most international NGOs do not accept walk-in volunteers for conflict zone operations — they require formal contracts, security training, and background checks. If you want to volunteer in-country, apply through established organizations like <a href="https://www.msf.org/work-msf" target="_blank" rel="noopener">MSF</a>, <a href="https://www.nrc.no/careers/" target="_blank" rel="noopener">NRC</a>, or <a href="https://www.rescue.org/volunteer" target="_blank" rel="noopener">IRC</a> well in advance. Expect a 3–6 month application and vetting process.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Volunteering in neighboring countries</div>
         <div class="card-body">Poland, Moldova, and Romania host millions of Ukrainian refugees and actively need volunteers at reception centers, language classes, and community integration programs. <a href="https://pah.org.pl/en/" target="_blank" rel="noopener">Polish Humanitarian Action</a> and <a href="https://www.caritas.eu/" target="_blank" rel="noopener">Caritas Europe</a> have active volunteer programs across border countries with lower barriers to entry than conflict-zone roles.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Medical professionals</div>
         <div class="card-body">Doctors, nurses, surgeons, and mental health professionals are in critical demand. <a href="https://www.msf.org/work-msf" target="_blank" rel="noopener">MSF</a>, <a href="https://www.projecthope.org/join-our-team/" target="_blank" rel="noopener">Project HOPE</a>, and <a href="https://internationalmedicalcorps.org/get-involved/" target="_blank" rel="noopener">International Medical Corps</a> all recruit qualified medical staff for Ukraine deployments. Mental health professionals are especially needed — demand far exceeds supply.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Skills-based volunteering</div>
         <div class="card-body">If you have specialized skills — engineering, logistics, legal expertise, communications, or IT — organizations like <a href="https://techtotherescue.org/" target="_blank" rel="noopener">Tech to the Rescue</a> match tech professionals with NGOs that need specific project support. Engagements are typically project-based and remote-friendly.</div>
@@ -366,27 +175,22 @@
         <div class="section-title">Hosting Refugees</div>
       </div>
       <p class="section-intro">Over 6 million Ukrainians have fled abroad. Opening your home is one of the most direct forms of support you can offer.</p>
-
       <div class="card">
         <div class="card-title">United Kingdom — Homes for Ukraine</div>
         <div class="card-body">The UK government's official sponsorship scheme allows individuals and organizations to host Ukrainian refugees. Sponsors receive £350/month for the first 12 months and £500/month thereafter. Apply or find out more at <a href="https://www.gov.uk/guidance/homes-for-ukraine-guidance-for-sponsors" target="_blank" rel="noopener">gov.uk/homes-for-ukraine</a>.</div>
       </div>
-
       <div class="card">
         <div class="card-title">United States — Uniting for Ukraine</div>
-        <div class="card-body">The <strong>Uniting for Ukraine</strong> program allows US residents to sponsor Ukrainian refugees for a 2-year humanitarian parole. Sponsors must demonstrate financial support capability. Apply through <a href="https://www.uscis.gov/ukraine" target="_blank" rel="noopener">uscis.gov/ukraine</a>. (As of early 2025, this program has been put on pause) Organizations like <a href="https://www.rescue.org/" target="_blank" rel="noopener">IRC</a> and <a href="https://www.hias.org/" target="_blank" rel="noopener">HIAS</a> can help match sponsors with refugee families.</div>
+        <div class="card-body">The <strong>Uniting for Ukraine</strong> program allows US residents to sponsor Ukrainian refugees for a 2-year humanitarian parole. Sponsors must demonstrate financial support capability. Apply through <a href="https://www.uscis.gov/ukraine" target="_blank" rel="noopener">uscis.gov/ukraine</a>. (As of early 2025, this program has been put on pause.) Organizations like <a href="https://www.rescue.org/" target="_blank" rel="noopener">IRC</a> and <a href="https://www.hias.org/" target="_blank" rel="noopener">HIAS</a> can help match sponsors with refugee families.</div>
       </div>
-
       <div class="card">
         <div class="card-title">European Union</div>
         <div class="card-body">Most EU member states have national programs for hosting Ukrainian refugees under the EU Temporary Protection Directive. Contact your country's immigration or social affairs ministry for local hosting schemes and financial support available to hosts. <a href="https://ec.europa.eu/info/strategy/priorities-2019-2024/stronger-europe-world/eu-solidarity-ukraine_en" target="_blank" rel="noopener">EU solidarity resources →</a></div>
       </div>
-
       <div class="card">
         <div class="card-title">What hosting involves</div>
         <div class="card-body">Most programs require providing furnished accommodation for a minimum of 6 months, and practical support with local registration, school enrollment for children, and accessing healthcare and benefits. Hosting organizations provide guidance and coordination. Expect a safeguarding vetting check before approval — this is standard and protects both hosts and guests.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Airbnb.org — free short-term housing</div>
         <div class="card-body"><a href="https://www.airbnb.org/help-ukraine" target="_blank" rel="noopener">Airbnb.org</a> coordinates free short-term housing for Ukrainian refugees through a network of volunteer hosts globally. You can offer your space through their platform with no long-term commitment — good if you can't commit to a multi-month hosting arrangement.</div>
@@ -401,17 +205,14 @@
         <span class="section-icon">📢</span>
         <div class="section-title">Spread the Word</div>
       </div>
-
       <div class="card">
         <div class="card-title">Share this map</div>
         <div class="card-body">Awareness drives donations. Share the <a href="index.html">Ukraine Aid Map</a> with your network — the more people who know about verified, on-the-ground organizations, the more effective the humanitarian response becomes. Direct link: <strong>ukraineaidmap.org</strong></div>
       </div>
-
       <div class="card">
         <div class="card-title">Advocate to your representatives</div>
         <div class="card-body">Contact your elected representatives to express support for continued humanitarian and military aid to Ukraine. Organizations like <a href="https://razomforukraine.org/advocacy/" target="_blank" rel="noopener">Razom for Ukraine</a> coordinate advocacy campaigns and can help you reach the right people.</div>
       </div>
-
       <div class="card">
         <div class="card-title">Counter misinformation</div>
         <div class="card-body">War propaganda and disinformation are active threats to public support for Ukraine. Reliable sources for ground truth include the <a href="https://kyivindependent.com" target="_blank" rel="noopener">Kyiv Independent</a>, <a href="https://euromaidanpress.com" target="_blank" rel="noopener">Euromaidan Press</a>, and <a href="https://www.pravda.com.ua/eng/" target="_blank" rel="noopener">Ukrainska Pravda</a>. Help correct false narratives when you encounter them.</div>
@@ -424,6 +225,34 @@
     <div>🇺🇦 Ukraine Aid Map — Phase 1 of a Global NGO Directory</div>
     <div><a href="index.html">← Back to Map</a></div>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const btn = document.getElementById('themeToggle');
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        root.removeAttribute('data-theme');
+        btn.textContent = '☾ Dark';
+        localStorage.setItem('theme', 'light');
+      } else {
+        root.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀ Light';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', () => {
+          const btn = document.getElementById('themeToggle');
+          if (btn) btn.textContent = '☀ Light';
+        });
+      }
+    })();
+  </script>
 
 </body>
 </html>

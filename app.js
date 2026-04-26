@@ -13,6 +13,14 @@ function toggleTheme() {
     btn.textContent = '☀ Light';
     localStorage.setItem('theme', 'dark');
   }
+   if (geoJsonLayer) {
+    geoJsonLayer.setStyle(feature => {
+      const p = feature.properties;
+      if (p.occupied) return getThemeStyles().occupied;
+      if (p.isCity) return getThemeStyles().cityDefault;
+      if (p.conflict) return getThemeStyles().conflict;
+      return getThemeStyles().default;
+    });
 }
 
 function getStyleKey(feature) {
@@ -269,3 +277,4 @@ function stripHTML(s) {
 }
 
 document.addEventListener('DOMContentLoaded', fetchNews);
+}

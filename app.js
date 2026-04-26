@@ -12,10 +12,6 @@ function toggleTheme() {
     root.setAttribute('data-theme', 'dark');
     btn.textContent = '☀ Light';
     localStorage.setItem('theme', 'dark');
-
-    if (geoJsonLayer) {
-  geoJsonLayer.setStyle(feature => getThemeStyles()[getStyleKey(feature)]);
-}
   }
 }
 

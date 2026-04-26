@@ -1,4 +1,6 @@
 // ---- THEME TOGGLE ----
+let activeLayer = null;
+let geoJsonLayer = null;
 
 function toggleTheme() {
   const root = document.documentElement;

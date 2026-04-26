@@ -4,23 +4,41 @@
    Type: Playfair Display + IBM Plex Mono/Sans
    ============================================ */
 
+/* Light mode (default) */
 :root {
+  --navy: #f5f0e8;
+  --navy-mid: #ede8dc;
+  --navy-light: #e4ddd0;
+  --parchment: #1a1a1a;
+  --parchment-mid: #333333;
+  --text-primary: #1a1a1a;
+  --text-muted: #6b6560;
+  --border: rgba(26, 26, 26, 0.1);
+  --border-strong: rgba(26, 26, 26, 0.22);
+  --accent: #4a7a9b;
+  --amber: #1a1a1a;
+  --amber-bright: #000000;
+  --amber-dim: #6b6560;
+  --conflict-orange: #c94a1a;
+  --sidebar-width: 320px;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
   --navy: #111113;
   --navy-mid: #18181b;
   --navy-light: #222226;
-  --amber: #e8edf2;
-  --amber-bright: #ffffff;
-  --amber-dim: #6b7280;
   --parchment: #f0f4f8;
   --parchment-mid: #d1d9e0;
-  --conflict-red: #c0392b;
-  --conflict-orange: #e05a2b;
   --text-primary: #eef2f6;
   --text-muted: #6b7280;
-  --text-dark: #111113;
   --border: rgba(240, 244, 248, 0.08);
   --border-strong: rgba(240, 244, 248, 0.18);
   --accent: #a8c4d8;
+  --amber: #e8edf2;
+  --amber-bright: #ffffff;
+  --amber-dim: #6b7280;
+  --conflict-orange: #e05a2b;
   --sidebar-width: 320px;
 }
 
@@ -752,6 +770,34 @@ footer {
 }
 .how-to-help-btn:hover {
   background: rgba(240,244,248,0.15);
+}
+
+.theme-toggle-btn {
+  background: rgba(26,26,26,0.06);
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  border-radius: 2px;
+  transition: background 0.15s;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+}
+.theme-toggle-btn:hover {
+  background: rgba(26,26,26,0.12);
+}
+[data-theme="dark"] .theme-toggle-btn {
+  background: rgba(240,244,248,0.08);
+}
+[data-theme="dark"] .theme-toggle-btn:hover {
+  background: rgba(240,244,248,0.15);
+}
+
+@media (max-width: 600px) {
+  .theme-toggle-btn { display: none; }
 }
 
 @media (max-width: 600px) {

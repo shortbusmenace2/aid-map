@@ -1,3 +1,44 @@
+// ---- THEME TOGGLE ----
+
+function toggleTheme() {
+  const root = document.documentElement;
+  const btn = document.getElementById('themeToggle');
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    root.removeAttribute('data-theme');
+    btn.textContent = '☾ Dark';
+    localStorage.setItem('theme', 'light');
+  } else {
+    root.setAttribute('data-theme', 'dark');
+    btn.textContent = '☀ Light';
+    localStorage.setItem('theme', 'dark');
+
+    if (geoJsonLayer) {
+  geoJsonLayer.setStyle(feature => getThemeStyles()[getStyleKey(feature)]);
+}
+  }
+}
+
+function getStyleKey(feature) {
+  const p = feature.properties;
+  if (p.occupied) return 'occupied';
+  if (p.isCity) return 'cityDefault';
+  if (p.conflict) return 'conflict';
+  return 'default';
+}
+
+// Apply saved theme on load
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('themeToggle');
+      if (btn) btn.textContent = '☀ Light';
+    });
+  }
+})();
+
 // ---- SIDEBAR TOGGLE ----
 
 function toggleSidebar() {
@@ -26,24 +67,26 @@ const map = L.map('leaflet-map', {
 
 map.setView([49.0, 31.5], 5);
 
-const STYLES = {
-  default:        { fillColor: '#222226', fillOpacity: 0.95, color: '#3a3a40', weight: 1.2, opacity: 1 },
-  conflict:       { fillColor: '#2d1010', fillOpacity: 0.90, color: '#e05a2b', weight: 1.5, opacity: 1 },
-  occupied:       { fillColor: '#1a1a1a', fillOpacity: 0.80, color: '#444',    weight: 1,   opacity: 0.8, dashArray: '5 4' },
-  hover:          { fillColor: '#2e2e35', fillOpacity: 0.98, color: '#e8edf2', weight: 1.8, opacity: 1 },
-  conflictHover:  { fillColor: '#3d1515', fillOpacity: 0.98, color: '#ff6b3d', weight: 2,   opacity: 1 },
-  active:         { fillColor: '#333340', fillOpacity: 1,    color: '#ffffff', weight: 2,   opacity: 1 },
-  conflictActive: { fillColor: '#4a1a1a', fillOpacity: 1,    color: '#ff6b3d', weight: 2,   opacity: 1 },
-  cityDefault:    { fillColor: '#a8c4d8', fillOpacity: 0.25, color: '#a8c4d8', weight: 1.8, opacity: 1 },
-  cityHover:      { fillColor: '#a8c4d8', fillOpacity: 0.5,  color: '#ffffff', weight: 2.2, opacity: 1 }
-};
-
+function getThemeStyles() {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  return {
+    default:        { fillColor: dark ? '#222226' : '#d4ccbb', fillOpacity: 0.95, color: dark ? '#3a3a40' : '#a09880', weight: 1.2, opacity: 1 },
+    conflict:       { fillColor: dark ? '#2d1010' : '#5a1a00', fillOpacity: dark ? 0.90 : 0.35, color: dark ? '#e05a2b' : '#c94a1a', weight: 1.5, opacity: 1 },
+    occupied:       { fillColor: dark ? '#1a1a1a' : '#b0a898', fillOpacity: 0.80, color: dark ? '#444' : '#888', weight: 1, opacity: 0.8, dashArray: '5 4' },
+    hover:          { fillColor: dark ? '#2e2e35' : '#c8c0aa', fillOpacity: 0.98, color: dark ? '#e8edf2' : '#1a1a1a', weight: 1.8, opacity: 1 },
+    conflictHover:  { fillColor: dark ? '#3d1515' : '#7a2200', fillOpacity: 0.98, color: dark ? '#ff6b3d' : '#c94a1a', weight: 2, opacity: 1 },
+    active:         { fillColor: dark ? '#333340' : '#b8b0a0', fillOpacity: 1, color: dark ? '#ffffff' : '#000000', weight: 2, opacity: 1 },
+    conflictActive: { fillColor: dark ? '#4a1a1a' : '#8a2800', fillOpacity: 1, color: dark ? '#ff6b3d' : '#c94a1a', weight: 2, opacity: 1 },
+    cityDefault:    { fillColor: dark ? '#a8c4d8' : '#4a7a9b', fillOpacity: 0.25, color: dark ? '#a8c4d8' : '#4a7a9b', weight: 1.8, opacity: 1 },
+    cityHover:      { fillColor: dark ? '#a8c4d8' : '#4a7a9b', fillOpacity: 0.5, color: dark ? '#ffffff' : '#000000', weight: 2.2, opacity: 1 }
+  };
+}
 function getStyle(feature) {
   const p = feature.properties;
-  if (p.occupied) return STYLES.occupied;
-  if (p.isCity)   return STYLES.cityDefault;
-  if (p.conflict) return STYLES.conflict;
-  return STYLES.default;
+  if (p.occupied) return getThemeStyles().occupied;
+  if (p.isCity)   return getThemeStyles().cityDefault;
+  if (p.conflict) return getThemeStyles().conflict;
+  return getThemeStyles().default;
 }
 
 let activeLayer = null;
@@ -59,7 +102,7 @@ function onEachFeature(feature, layer) {
   layer.on({
     mouseover() {
       if (activeLayer === layer) return;
-      layer.setStyle(p.isCity ? STYLES.cityHover : p.conflict ? STYLES.conflictHover : STYLES.hover);
+      layer.setStyle(p.isCity ? getThemeStyles().cityHover : p.conflict ? getThemeStyles().conflictHover : getThemeStyles().hover);
       layer.bringToFront();
     },
     mouseout() {
@@ -75,7 +118,7 @@ function onEachFeature(feature, layer) {
         return;
       }
       activeLayer = layer;
-      layer.setStyle(p.conflict ? STYLES.conflictActive : p.isCity ? STYLES.cityHover : STYLES.active);
+      layer.setStyle(p.conflict ? getThemeStyles().conflictActive : p.isCity ? getThemeStyles().cityHover : getThemeStyles().active);
       layer.bringToFront();
       renderOblastPanel(p.id);
       if (window.innerWidth < 900) {

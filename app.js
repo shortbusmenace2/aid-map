@@ -95,9 +95,6 @@ function getStyle(feature) {
   return getThemeStyles().default;
 }
 
-let activeLayer = null;
-let geoJsonLayer = null;
-
 function onEachFeature(feature, layer) {
   const p = feature.properties;
 

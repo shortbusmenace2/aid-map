@@ -75,7 +75,7 @@ function getThemeStyles() {
   const dark = document.documentElement.getAttribute('data-theme') === 'dark';
   return {
     default:        { fillColor: dark ? '#222226' : '#d4ccbb', fillOpacity: 0.95, color: dark ? '#3a3a40' : '#a09880', weight: 1.2, opacity: 1 },
-    conflict:       { fillColor: dark ? '#2d1010' : '#5a1a00', fillOpacity: dark ? 0.90 : 0.35, color: dark ? '#e05a2b' : '#c94a1a', weight: 1.5, opacity: 1 },
+    conflict:       { fillColor: dark ? '#2d1010' : '#5a1a00', fillOpacity: dark ? 0.90 : 0.65, color: dark ? '#e05a2b' : '#c94a1a', weight: 1.5, opacity: 1 },
     occupied:       { fillColor: dark ? '#1a1a1a' : '#b0a898', fillOpacity: 0.80, color: dark ? '#444' : '#888', weight: 1, opacity: 0.8, dashArray: '5 4' },
     hover:          { fillColor: dark ? '#2e2e35' : '#c8c0aa', fillOpacity: 0.98, color: dark ? '#e8edf2' : '#1a1a1a', weight: 1.8, opacity: 1 },
     conflictHover:  { fillColor: dark ? '#3d1515' : '#7a2200', fillOpacity: 0.98, color: dark ? '#ff6b3d' : '#c94a1a', weight: 2, opacity: 1 },

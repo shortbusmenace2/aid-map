@@ -80,7 +80,7 @@ const NGO_DATA = {
 
   "zaporizhzhia": {
     name: "Zaporizhzhia Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "International Committee of the Red Cross (ICRC)",
@@ -159,7 +159,7 @@ const NGO_DATA = {
 
   "donetsk": {
     name: "Donetsk Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Médecins du Monde",
@@ -572,7 +572,7 @@ const NGO_DATA = {
 
   "kharkiv": {
     name: "Kharkiv Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "Kharkiv Human Rights Protection Group",
@@ -988,7 +988,7 @@ const NGO_DATA = {
 
   "chernihiv": {
     name: "Chernihiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "ACTED Ukraine",

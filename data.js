@@ -9,7 +9,7 @@ const NGO_DATA = {
 
   "kherson": {
     name: "Kherson Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Médecins Sans Frontières (MSF)",
@@ -254,7 +254,7 @@ const NGO_DATA = {
 
   "mykolaiv": {
     name: "Mykolaiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UNICEF Ukraine",
@@ -341,7 +341,7 @@ const NGO_DATA = {
 
   "odesa": {
     name: "Odesa Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Razom for Ukraine",
@@ -430,7 +430,7 @@ const NGO_DATA = {
 
   "kyiv-city": {
     name: "Kyiv (City)",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "United Help Ukraine",
@@ -525,7 +525,7 @@ const NGO_DATA = {
 
   "kyiv-obl": {
     name: "Kyiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Serhiy Prytula Charity Foundation",
@@ -572,7 +572,7 @@ const NGO_DATA = {
 
   "kharkiv": {
     name: "Kharkiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Kharkiv Human Rights Protection Group",
@@ -667,7 +667,7 @@ const NGO_DATA = {
 
   "lviv": {
     name: "Lviv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Lviv Volunteer Center",
@@ -746,7 +746,7 @@ const NGO_DATA = {
 
   "dnipro": {
     name: "Dnipropetrovsk Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "East SOS",
@@ -809,7 +809,7 @@ const NGO_DATA = {
 
   "sumy": {
     name: "Sumy Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UNICEF Ukraine",
@@ -872,7 +872,7 @@ const NGO_DATA = {
 
   "poltava": {
     name: "Poltava Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Caritas Ukraine",
@@ -903,7 +903,7 @@ const NGO_DATA = {
 
   "cherkasy": {
     name: "Cherkasy Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UN Development Programme Ukraine",
@@ -926,7 +926,7 @@ const NGO_DATA = {
 
   "vinnytsia": {
     name: "Vinnytsia Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "International Organization for Migration (IOM)",
@@ -957,7 +957,7 @@ const NGO_DATA = {
 
   "zhytomyr": {
     name: "Zhytomyr Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Danish Refugee Council",
@@ -1074,7 +1074,7 @@ const NGO_DATA = {
 
   "kirovograd": {
     name: "Kirovohrad Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UNHCR Ukraine",
@@ -1087,10 +1087,10 @@ const NGO_DATA = {
     ]
   },
 
-  "rivne": { name: "Rivne Oblast", conflict: false, ngos: [] },
+  "rivne": { name: "Rivne Oblast", conflict: true, ngos: [] },
   "ternopil": {
     name: "Ternopil Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "MoveUkraine",
@@ -1102,14 +1102,14 @@ const NGO_DATA = {
       }
     ]
   },
-  "khmelnytskyi": { name: "Khmelnytskyi Oblast", conflict: false, ngos: [] },
-  "chernivtsi": { name: "Chernivtsi Oblast", conflict: false, ngos: [] },
-  "ivano-frankivsk": { name: "Ivano-Frankivsk Oblast", conflict: false, ngos: [] },
-  "zakarpattia": { name: "Zakarpattia Oblast", conflict: false, ngos: [] },
+  "khmelnytskyi": { name: "Khmelnytskyi Oblast", conflict: true, ngos: [] },
+  "chernivtsi": { name: "Chernivtsi Oblast", conflict: true, ngos: [] },
+  "ivano-frankivsk": { name: "Ivano-Frankivsk Oblast", conflict: true, ngos: [] },
+  "zakarpattia": { name: "Zakarpattia Oblast", conflict: true, ngos: [] },
 
   "crimea": {
     name: "Crimea (Occupied)",
-    conflict: false,
+    conflict: true,
     occupied: true,
     ngos: [
       {

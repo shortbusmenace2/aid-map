@@ -80,7 +80,7 @@ const NGO_DATA = {
 
   "zaporizhzhia": {
     name: "Zaporizhzhia Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "International Committee of the Red Cross (ICRC)",
@@ -430,7 +430,7 @@ const NGO_DATA = {
 
   "kyiv-city": {
     name: "Kyiv (City)",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "United Help Ukraine",
@@ -525,7 +525,7 @@ const NGO_DATA = {
 
   "kyiv-obl": {
     name: "Kyiv Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "Serhiy Prytula Charity Foundation",
@@ -872,7 +872,7 @@ const NGO_DATA = {
 
   "poltava": {
     name: "Poltava Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Caritas Ukraine",
@@ -988,7 +988,7 @@ const NGO_DATA = {
 
   "chernihiv": {
     name: "Chernihiv Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "ACTED Ukraine",

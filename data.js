@@ -872,7 +872,7 @@ const NGO_DATA = {
 
   "poltava": {
     name: "Poltava Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Caritas Ukraine",
@@ -957,7 +957,7 @@ const NGO_DATA = {
 
   "zhytomyr": {
     name: "Zhytomyr Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Danish Refugee Council",
@@ -988,7 +988,7 @@ const NGO_DATA = {
 
   "chernihiv": {
     name: "Chernihiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "ACTED Ukraine",
@@ -1074,7 +1074,7 @@ const NGO_DATA = {
 
   "kirovograd": {
     name: "Kirovohrad Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UNHCR Ukraine",

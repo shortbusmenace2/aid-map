@@ -341,7 +341,7 @@ const NGO_DATA = {
 
   "odesa": {
     name: "Odesa Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Razom for Ukraine",
@@ -746,7 +746,7 @@ const NGO_DATA = {
 
   "dnipro": {
     name: "Dnipropetrovsk Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "East SOS",
@@ -1074,7 +1074,7 @@ const NGO_DATA = {
 
   "kirovograd": {
     name: "Kirovohrad Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "UNHCR Ukraine",

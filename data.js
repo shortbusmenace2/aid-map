@@ -9,7 +9,7 @@ const NGO_DATA = {
 
   "kherson": {
     name: "Kherson Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "Médecins Sans Frontières (MSF)",
@@ -80,7 +80,7 @@ const NGO_DATA = {
 
   "zaporizhzhia": {
     name: "Zaporizhzhia Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "International Committee of the Red Cross (ICRC)",
@@ -341,7 +341,7 @@ const NGO_DATA = {
 
   "odesa": {
     name: "Odesa Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Razom for Ukraine",
@@ -430,7 +430,7 @@ const NGO_DATA = {
 
   "kyiv-city": {
     name: "Kyiv (City)",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "United Help Ukraine",
@@ -525,7 +525,7 @@ const NGO_DATA = {
 
   "kyiv-obl": {
     name: "Kyiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Serhiy Prytula Charity Foundation",
@@ -746,7 +746,7 @@ const NGO_DATA = {
 
   "dnipro": {
     name: "Dnipropetrovsk Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "East SOS",

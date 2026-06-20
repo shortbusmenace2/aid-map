@@ -746,7 +746,7 @@ const NGO_DATA = {
 
   "dnipro": {
     name: "Dnipropetrovsk Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "East SOS",

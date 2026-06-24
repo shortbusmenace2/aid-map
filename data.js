@@ -809,7 +809,7 @@ const NGO_DATA = {
 
   "sumy": {
     name: "Sumy Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UNICEF Ukraine",
@@ -988,7 +988,7 @@ const NGO_DATA = {
 
   "chernihiv": {
     name: "Chernihiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "ACTED Ukraine",

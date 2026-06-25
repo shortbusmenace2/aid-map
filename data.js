@@ -341,7 +341,7 @@ const NGO_DATA = {
 
   "odesa": {
     name: "Odesa Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Razom for Ukraine",
@@ -988,7 +988,7 @@ const NGO_DATA = {
 
   "chernihiv": {
     name: "Chernihiv Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "ACTED Ukraine",

@@ -9,7 +9,7 @@ const NGO_DATA = {
 
   "kherson": {
     name: "Kherson Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Médecins Sans Frontières (MSF)",
@@ -254,7 +254,7 @@ const NGO_DATA = {
 
   "mykolaiv": {
     name: "Mykolaiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UNICEF Ukraine",
@@ -430,7 +430,7 @@ const NGO_DATA = {
 
   "kyiv-city": {
     name: "Kyiv (City)",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "United Help Ukraine",
@@ -525,7 +525,7 @@ const NGO_DATA = {
 
   "kyiv-obl": {
     name: "Kyiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Serhiy Prytula Charity Foundation",
@@ -746,7 +746,7 @@ const NGO_DATA = {
 
   "dnipro": {
     name: "Dnipropetrovsk Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "East SOS",
@@ -809,7 +809,7 @@ const NGO_DATA = {
 
   "sumy": {
     name: "Sumy Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UNICEF Ukraine",

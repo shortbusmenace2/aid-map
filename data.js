@@ -9,7 +9,7 @@ const NGO_DATA = {
 
   "kherson": {
     name: "Kherson Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "Médecins Sans Frontières (MSF)",
@@ -159,7 +159,7 @@ const NGO_DATA = {
 
   "donetsk": {
     name: "Donetsk Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "Médecins du Monde",
@@ -872,7 +872,7 @@ const NGO_DATA = {
 
   "poltava": {
     name: "Poltava Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "Caritas Ukraine",

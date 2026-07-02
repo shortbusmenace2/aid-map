@@ -159,7 +159,7 @@ const NGO_DATA = {
 
   "donetsk": {
     name: "Donetsk Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Médecins du Monde",
@@ -254,7 +254,7 @@ const NGO_DATA = {
 
   "mykolaiv": {
     name: "Mykolaiv Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "UNICEF Ukraine",
@@ -988,7 +988,7 @@ const NGO_DATA = {
 
   "chernihiv": {
     name: "Chernihiv Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "ACTED Ukraine",
@@ -1074,7 +1074,7 @@ const NGO_DATA = {
 
   "kirovograd": {
     name: "Kirovohrad Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "UNHCR Ukraine",

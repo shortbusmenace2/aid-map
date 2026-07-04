@@ -1074,7 +1074,7 @@ const NGO_DATA = {
 
   "kirovograd": {
     name: "Kirovohrad Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "UNHCR Ukraine",

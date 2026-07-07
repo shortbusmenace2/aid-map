@@ -572,7 +572,7 @@ const NGO_DATA = {
 
   "kharkiv": {
     name: "Kharkiv Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Kharkiv Human Rights Protection Group",

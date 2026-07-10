@@ -341,7 +341,7 @@ const NGO_DATA = {
 
   "odesa": {
     name: "Odesa Oblast",
-    conflict: false,
+    conflict: true,
     ngos: [
       {
         name: "Razom for Ukraine",

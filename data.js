@@ -80,7 +80,7 @@ const NGO_DATA = {
 
   "zaporizhzhia": {
     name: "Zaporizhzhia Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "International Committee of the Red Cross (ICRC)",
@@ -159,7 +159,7 @@ const NGO_DATA = {
 
   "donetsk": {
     name: "Donetsk Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "Médecins du Monde",
@@ -572,7 +572,7 @@ const NGO_DATA = {
 
   "kharkiv": {
     name: "Kharkiv Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "Kharkiv Human Rights Protection Group",
@@ -746,7 +746,7 @@ const NGO_DATA = {
 
   "dnipro": {
     name: "Dnipropetrovsk Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "East SOS",
@@ -809,7 +809,7 @@ const NGO_DATA = {
 
   "sumy": {
     name: "Sumy Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "UNICEF Ukraine",
@@ -988,7 +988,7 @@ const NGO_DATA = {
 
   "chernihiv": {
     name: "Chernihiv Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "ACTED Ukraine",
@@ -1035,7 +1035,7 @@ const NGO_DATA = {
 
   "luhansk": {
     name: "Luhansk Oblast",
-    conflict: true,
+    conflict: false,
     ngos: [
       {
         name: "Proliska",
@@ -1087,7 +1087,7 @@ const NGO_DATA = {
     ]
   },
 
-  "rivne": { name: "Rivne Oblast", conflict: true, ngos: [] },
+  "rivne": { name: "Rivne Oblast", conflict: false, ngos: [] },
   "ternopil": {
     name: "Ternopil Oblast",
     conflict: false,
@@ -1102,14 +1102,14 @@ const NGO_DATA = {
       }
     ]
   },
-  "khmelnytskyi": { name: "Khmelnytskyi Oblast", conflict: true, ngos: [] },
-  "chernivtsi": { name: "Chernivtsi Oblast", conflict: true, ngos: [] },
-  "ivano-frankivsk": { name: "Ivano-Frankivsk Oblast", conflict: true, ngos: [] },
-  "zakarpattia": { name: "Zakarpattia Oblast", conflict: true, ngos: [] },
+  "khmelnytskyi": { name: "Khmelnytskyi Oblast", conflict: false, ngos: [] },
+  "chernivtsi": { name: "Chernivtsi Oblast", conflict: false, ngos: [] },
+  "ivano-frankivsk": { name: "Ivano-Frankivsk Oblast", conflict: false, ngos: [] },
+  "zakarpattia": { name: "Zakarpattia Oblast", conflict: false, ngos: [] },
 
   "crimea": {
     name: "Crimea (Occupied)",
-    conflict: true,
+    conflict: false,
     occupied: true,
     ngos: [
       {
